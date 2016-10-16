@@ -1,10 +1,12 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
 <qgis projectname="" version="2.8.3-Wien">
   <title></title>
-  <layer-tree-group expanded="1" checked="Qt::Checked" name="">
+  <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
     <customproperties/>
     <layer-tree-layer expanded="1" checked="Qt::Checked" id="Vegetation_region20161015162316087" name="Vegetation_region">
-      <customproperties/>
+      <customproperties>
+        <property key="showFeatureCount" value="1"/>
+      </customproperties>
     </layer-tree-layer>
     <layer-tree-layer expanded="1" checked="Qt::Checked" id="Vegetation_polyline20161014175034224" name="Vegetation_polyline">
       <customproperties/>
@@ -12,7 +14,7 @@
     <layer-tree-layer expanded="1" checked="Qt::Checked" id="Zaporiz_ka_Ramka_region20161014175152153" name="Zaporiz_ka_Ramka_region">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="X_34_68_G_SK20161015080825964" name="X-34-68-G_SK">
+    <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="X_34_68_G_SK20161015080825964" name="X-34-68-G_SK">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="1" checked="Qt::Checked" id="X_34_68_A_SK20161014175123807" name="X-34-68-A_SK">
@@ -26,10 +28,10 @@
   <mapcanvas>
     <units>degrees</units>
     <extent>
-      <xmin>36.27252350958048055</xmin>
-      <ymin>47.15538648594039728</ymin>
-      <xmax>36.29427529499002958</xmax>
-      <ymax>47.16319893351028725</ymax>
+      <xmin>35.86913408013624149</xmin>
+      <ymin>47.14693839020018373</ymin>
+      <xmax>36.56519121324362942</xmax>
+      <ymax>47.39693671243711748</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -66,7 +68,7 @@
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Vegetation_region" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Vegetation_region" showFeatureCount="1">
       <filegroup open="true" hidden="false">
         <legendlayerfile isInOverview="0" layerid="Vegetation_region20161015162316087" visible="1"/>
       </filegroup>
@@ -81,9 +83,9 @@
         <legendlayerfile isInOverview="0" layerid="Zaporiz_ka_Ramka_region20161014175152153" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="X-34-68-G_SK" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="X-34-68-G_SK" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="X_34_68_G_SK20161015080825964" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="X_34_68_G_SK20161015080825964" visible="0"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="X-34-68-A_SK" showFeatureCount="0">
@@ -441,18 +443,182 @@
         <edittype widgetv2type="TextEdit" name="Name_lat">
           <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="CodeTopo">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        <edittype widgetv2type="Classification" name="CodeTopo">
+          <widgetv2config fieldEditable="1" labelOnTop="1"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="CodeName">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        <edittype widgetv2type="Classification" name="CodeName">
+          <widgetv2config fieldEditable="1" labelOnTop="1"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="CODE_PR">
           <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
         </edittype>
       </edittypes>
-      <renderer-v2 symbollevels="0" type="singleSymbol">
+      <renderer-v2 attr="CodeName" symbollevels="0" type="categorizedSymbol">
+        <categories>
+          <category render="true" symbol="0" value="Деревна рослинність штучного походження" label="Деревна рослинність штучного походження"/>
+          <category render="true" symbol="1" value="Ліс" label="Ліс"/>
+          <category render="true" symbol="2" value="Ліс рідкий" label="Ліс рідкий"/>
+          <category render="true" symbol="3" value="Лісовий розсадник, молоді посадки" label="Лісовий розсадник, молоді посадки"/>
+          <category render="true" symbol="4" value="Лугова рослинність" label="Лугова рослинність"/>
+          <category render="true" symbol="5" value="Очеретяна і тростинна рослинність" label="Очеретяна і тростинна рослинність"/>
+          <category render="false" symbol="6" value="Плантації технічних культур деревних" label="Плантації технічних культур деревних"/>
+          <category render="true" symbol="7" value="Поросль лісу" label="Поросль лісу"/>
+          <category render="true" symbol="8" value="Фруктові і цитрусові сади" label="Фруктові і цитрусові сади"/>
+          <category render="true" symbol="9" value="" label=""/>
+        </categories>
         <symbols>
+          <symbol alpha="1" type="fill" name="0">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0"/>
+              <prop k="color" v="238,133,165,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="240,0,184,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.46"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="no"/>
+            </layer>
+          </symbol>
+          <symbol alpha="1" type="fill" name="1">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0"/>
+              <prop k="color" v="203,185,19,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="51,160,44,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.66"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="no"/>
+            </layer>
+          </symbol>
+          <symbol alpha="1" type="fill" name="2">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0"/>
+              <prop k="color" v="95,233,194,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="253,191,111,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.46"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="no"/>
+            </layer>
+          </symbol>
+          <symbol alpha="1" type="fill" name="3">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0"/>
+              <prop k="color" v="32,204,52,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="240,0,184,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.46"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="diagonal_x"/>
+            </layer>
+          </symbol>
+          <symbol alpha="1" type="fill" name="4">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0"/>
+              <prop k="color" v="164,115,210,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="240,0,184,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.46"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="horizontal"/>
+            </layer>
+          </symbol>
+          <symbol alpha="1" type="fill" name="5">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0"/>
+              <prop k="color" v="234,98,221,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="240,0,184,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.46"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="cross"/>
+            </layer>
+          </symbol>
+          <symbol alpha="1" type="fill" name="6">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0"/>
+              <prop k="color" v="39,175,238,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="240,0,184,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.46"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="no"/>
+            </layer>
+          </symbol>
+          <symbol alpha="1" type="fill" name="7">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0"/>
+              <prop k="color" v="82,93,218,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="227,26,28,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.46"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="no"/>
+            </layer>
+          </symbol>
+          <symbol alpha="1" type="fill" name="8">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0"/>
+              <prop k="color" v="0,0,0,0"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="31,120,180,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.46"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="no"/>
+            </layer>
+          </symbol>
+          <symbol alpha="1" type="fill" name="9">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0"/>
+              <prop k="color" v="153,210,95,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="240,0,184,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.46"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="no"/>
+            </layer>
+          </symbol>
+        </symbols>
+        <source-symbol>
           <symbol alpha="1" type="fill" name="0">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0"/>
@@ -468,7 +634,9 @@
               <prop k="style" v="no"/>
             </layer>
           </symbol>
-        </symbols>
+        </source-symbol>
+        <colorramp type="randomcolors" name="[source]"/>
+        <invertedcolorramp value="0"/>
         <rotation/>
         <sizescale scalemethod="area"/>
       </renderer-v2>
@@ -640,10 +808,10 @@
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <featformsuppress>0</featformsuppress>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <editorlayout>generatedlayout</editorlayout>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
@@ -667,11 +835,11 @@
         <edittype widgetv2type="TextEdit" name="Name_lat">
           <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="CodeTopo">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        <edittype widgetv2type="Classification" name="CodeTopo">
+          <widgetv2config fieldEditable="1" labelOnTop="1"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="CodeName">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        <edittype widgetv2type="Classification" name="CodeName">
+          <widgetv2config fieldEditable="1" labelOnTop="1"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="CODE_PR">
           <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
@@ -1076,6 +1244,7 @@
     <WMSKeywordList type="QStringList">
       <value></value>
     </WMSKeywordList>
+    <WFSUrl type="QString"></WFSUrl>
     <Topol>
       <layer1_0 type="QString">Vegetation_region20161015162316087</layer1_0>
       <layer2_0 type="QString">Zaporiz_ka_Ramka_region20161014175152153</layer2_0>
@@ -1083,7 +1252,6 @@
       <testCount type="int">1</testCount>
       <tolerance_0 type="QString">0</tolerance_0>
     </Topol>
-    <WFSUrl type="QString"></WFSUrl>
     <Paths>
       <Absolute type="bool">false</Absolute>
     </Paths>
@@ -1096,8 +1264,8 @@
       <DegreeFormat type="QString">D</DegreeFormat>
     </PositionPrecision>
     <WCSUrl type="QString"></WCSUrl>
-    <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
     <WMSContactPhone type="QString"></WMSContactPhone>
+    <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
     <WMSServiceAbstract type="QString"></WMSServiceAbstract>
     <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
     <Measure>
@@ -1122,17 +1290,16 @@
       <DefaultSnapToleranceUnit type="int">2</DefaultSnapToleranceUnit>
       <LayerSnappingList type="QStringList">
         <value>Vegetation_polyline20161014175034224</value>
-        <value>Zaporiz_ka_Ramka_region20161014175152153</value>
         <value>Vegetation_region20161015162316087</value>
+        <value>Zaporiz_ka_Ramka_region20161014175152153</value>
       </LayerSnappingList>
       <LayerSnappingEnabledList type="QStringList">
         <value>enabled</value>
         <value>enabled</value>
         <value>enabled</value>
       </LayerSnappingEnabledList>
-      <SnappingMode type="QString">advanced</SnappingMode>
+      <SnappingMode type="QString">all_layers</SnappingMode>
       <AvoidIntersectionsList type="QStringList">
-        <value>Zaporiz_ka_Ramka_region20161014175152153</value>
         <value>Vegetation_region20161015162316087</value>
       </AvoidIntersectionsList>
       <IntersectionSnapping type="bool">true</IntersectionSnapping>
