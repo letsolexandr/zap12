@@ -9,7 +9,7 @@
     <layer-tree-layer expanded="1" checked="Qt::Checked" id="Road_polyline20161019114931273" name="Road_polyline">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="road_bufer20161020120515777" name="road_bufer">
+    <layer-tree-layer expanded="1" checked="Qt::Checked" id="road_bufer20161020142259967" name="road_bufer">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="1" checked="Qt::Checked" id="Vegetation_region20161015162316087" name="Vegetation_region">
@@ -43,10 +43,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>4015656.06950219534337521</xmin>
-      <ymin>6015206.41440317034721375</ymin>
-      <xmax>4016126.03203462343662977</xmax>
-      <ymax>6015576.6154347974807024</ymax>
+      <xmin>4030924.57829736452549696</xmin>
+      <ymin>5973597.02673407644033432</ymin>
+      <xmax>4034150.82237854320555925</xmax>
+      <ymax>5976138.41844500228762627</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -73,6 +73,7 @@
       <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Zaporiz_ka_Ramka_region20161014175152153"/>
       <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:3857" srcDatumTransform="-1" destDatumTransform="-1" layerid="TMSFrame20161019114117736"/>
       <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4030" srcDatumTransform="-1" destDatumTransform="-1" layerid="road_bufer20161020120515777"/>
+      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4030" srcDatumTransform="-1" destDatumTransform="-1" layerid="road_bufer20161020142259967"/>
       <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Block_region20161020120647474"/>
       <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:3857" srcDatumTransform="-1" destDatumTransform="-1" layerid="OpenLayers_plugin_layer20161019111108709"/>
       <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="X_34_68_A_SK20161014175123807"/>
@@ -93,8 +94,8 @@
       <item>OpenLayers_plugin_layer20161019111108709</item>
       <item>bin20161019114410147</item>
       <item>Road_polyline20161019114931273</item>
-      <item>road_bufer20161020120515777</item>
       <item>Block_region20161020120647474</item>
+      <item>road_bufer20161020142259967</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
@@ -110,7 +111,7 @@
     </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="road_bufer" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="road_bufer20161020120515777" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="road_bufer20161020142259967" visible="1"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Vegetation_region" showFeatureCount="1">
@@ -2470,7 +2471,7 @@
       </edittypes>
     </maplayer>
     <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <id>road_bufer20161020120515777</id>
+      <id>road_bufer20161020142259967</id>
       <datasource>../suport/road_bufer.shp</datasource>
       <title></title>
       <abstract></abstract>
@@ -2507,7 +2508,7 @@
           <symbol alpha="1" type="fill" name="0">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0"/>
-              <prop k="color" v="182,109,194,255"/>
+              <prop k="color" v="240,165,107,255"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0"/>
@@ -2622,8 +2623,8 @@
         <value>Vegetation_region20161015162316087</value>
         <value>Zaporiz_ka_Ramka_region20161014175152153</value>
         <value>bin20161019114410147</value>
-        <value>road_bufer20161020120515777</value>
         <value>Block_region20161020120647474</value>
+        <value>road_bufer20161020142259967</value>
       </LayerSnappingList>
       <LayerSnappingEnabledList type="QStringList">
         <value>enabled</value>
@@ -2631,14 +2632,14 @@
         <value>enabled</value>
         <value>enabled</value>
         <value>enabled</value>
-        <value>enabled</value>
-        <value>enabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
       </LayerSnappingEnabledList>
       <SnappingMode type="QString">advanced</SnappingMode>
       <AvoidIntersectionsList type="QStringList">
         <value>Vegetation_region20161015162316087</value>
-        <value>road_bufer20161020120515777</value>
         <value>Block_region20161020120647474</value>
+        <value>road_bufer20161020142259967</value>
       </AvoidIntersectionsList>
       <IntersectionSnapping type="bool">true</IntersectionSnapping>
       <LayerSnappingToleranceUnitList type="QStringList">
@@ -2663,13 +2664,13 @@
       <DefaultSnapTolerance type="double">5</DefaultSnapTolerance>
       <TopologicalEditing type="bool">true</TopologicalEditing>
       <LayerSnappingToleranceList type="QStringList">
+        <value>25.000000</value>
         <value>5.000000</value>
         <value>5.000000</value>
         <value>5.000000</value>
         <value>5.000000</value>
         <value>5.000000</value>
-        <value>5.000000</value>
-        <value>5.000000</value>
+        <value>2.000000</value>
       </LayerSnappingToleranceList>
     </Digitizing>
     <Identify>
